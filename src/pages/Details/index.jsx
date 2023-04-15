@@ -1,4 +1,7 @@
 import { Header } from "../../components/Header"
+import { Link } from "../../components/Link"
+
+import { FiArrowLeft } from "react-icons/fi"
 
 import { Container } from "./styles"
 
@@ -7,7 +10,7 @@ export function Details() {
         <Container>
             <Header />
             <main>
-                <h2>Olá</h2>
+                <Link content="Voltar" icon={FiArrowLeft}/>
             </main>
         </Container>
         
