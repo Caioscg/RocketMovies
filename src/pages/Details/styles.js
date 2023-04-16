@@ -13,7 +13,39 @@ export const Container = styled.div`
     > main {
         grid-area: content;
         overflow-y: auto;
-        padding: 40px 116px;
+        margin: 40px 116px;
+
+        .tags {
+            margin-top: 40px;
+            
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .text {
+            margin-top: 40px;
+            margin-right: 24px;
+
+            font-size: 16px;
+            color: ${({ theme }) => theme.COLORS.WHITE};
+            text-align: justify;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+            margin-block: 2px;
+            
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: ${({ theme }) => theme.COLORS.PINK};
+            border-radius: 100vw;
+        }
 
     }
 `
