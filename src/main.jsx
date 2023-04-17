@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyles from './styles/global'
 
 import { Details } from './pages/Details'
+import { SingIn } from './pages/SingIn'
 
 import Theme from './styles/theme'
 
@@ -13,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={Theme}>
       <GlobalStyles />
-      <Details />
+      <SingIn />
     </ThemeProvider>
   </React.StrictMode>,
 )
