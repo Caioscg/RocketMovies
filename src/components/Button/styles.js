@@ -12,4 +12,5 @@ export const Container = styled.button`
     margin-top: 8px;
     
     border-radius: 10px;
+    border: none;
 `
