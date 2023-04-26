@@ -1,4 +1,6 @@
-import { Container, Input, Profile } from "./styles";
+import { Container, Profile } from "./styles";
+
+import { Input } from "../Input";
 
 export function Header() {
     return(
@@ -10,7 +12,7 @@ export function Header() {
             <Profile>
                 <div>
                     <span>Caio Gonzaga</span>
-                    <a href="/">Sair</a>
+                    <a href="/">sair</a>
                 </div>
                 <img src="https://github.com/Caioscg.png" alt="Foto do usuário" />
             </Profile>

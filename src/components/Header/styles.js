@@ -5,7 +5,7 @@ export const Container = styled.div`
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 128px;
 
     height: 116px;
     width: 100%;
@@ -23,39 +23,26 @@ export const Container = styled.div`
             filter: drop-shadow(0 0 1.5em ${({ theme }) => theme.COLORS.PINK});
         }
     }
-
-
-`
-
-export const Input = styled.input`
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-    color: ${({ theme }) => theme.COLORS.WHITE};
-        
-    width: 630px;
-    height: 56px;
-    padding: 19px 24px;
-
-    border-radius: 10px;
-
-    border: 0;
-
-    &::placeholder {
-        color: ${({ theme }) => theme.COLORS.GRAY_200};
-    }
 `
 
 export const Profile = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 9px;
 
-    max-width: 200px;
+    min-width: fit-content;
+    justify-content: right;
 
     > div {
         display: flex;
         flex-direction: column;
         text-align: right;
+        font-size: 14px;
+        line-height: 18px;
+
+        span {
+            font-weight: 700;
+        }
 
         a {
             color: ${({ theme }) => theme.COLORS.GRAY_200};
@@ -67,5 +54,6 @@ export const Profile = styled.div`
         height: 64px;
 
         border-radius: 50%;
+        border: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_600};
     }
 `
