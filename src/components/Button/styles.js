@@ -13,4 +13,8 @@ export const Container = styled.button`
     
     border-radius: 10px;
     border: none;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
 `
