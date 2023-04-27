@@ -8,9 +8,9 @@ export function Profile() {
     return(
         <Container>
             <header>
+                <Link content="Voltar" icon={FiArrowLeft}/>
             </header>
 
-            <Link content="Voltar" icon={FiArrowLeft}/>
 
             <Form>
                 <Avatar>

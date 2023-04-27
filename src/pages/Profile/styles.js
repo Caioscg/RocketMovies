@@ -8,17 +8,17 @@ export const Container = styled.div`
         width: 100%;
         height: 144px;
 
-        background-color: ${({ theme }) => theme.COLORS.PINK};
-        opacity: 0.08;
-        
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_500};
+        position: relative;
+
+        a {
+            color: ${({ theme }) => theme.COLORS.PINK};
+            position: absolute;
+            top: 64px;
+            left: 144px;
+        }
     }
 
-    a {
-        color: ${({ theme }) => theme.COLORS.PINK};
-        position: absolute;
-        top: 64px;
-        left: 168px;
-    }
 `
 
 export const Form = styled.form`

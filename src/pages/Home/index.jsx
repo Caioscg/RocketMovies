@@ -1,5 +1,5 @@
 import { Container, Main } from "./styles";
-import { Note } from "../../components/Note"
+import { Note } from "../../components/Notes"
 import { Header } from "../../components/Header"
 import { Button } from "../../components/Button"
 
