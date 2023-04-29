@@ -5,7 +5,7 @@ import { Tags } from "../Tags"
 export function Note({data, ...rest}) {
     return(
         <Container {...rest}>
-            <h1>{data.title}</h1>
+            <h3>{data.title}</h3>
             <Star number={data.starNumber} size="12"/>
             <p>
                 {data.description}

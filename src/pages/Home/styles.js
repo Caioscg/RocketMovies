@@ -10,10 +10,12 @@ export const Main = styled.div`
 
     width: 100%;
 
-    > div {
+    > .head {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        margin-bottom: 38px;
 
         button {
             padding: 16px 32px;
