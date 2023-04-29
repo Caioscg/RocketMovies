@@ -10,6 +10,22 @@ export const Main = styled.div`
 
     width: 100%;
 
+    overflow-y: auto;
+    ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+    ::-webkit-scrollbar-track {
+            background-color: transparent;
+            margin-block: 2px;
+            
+    }
+
+    ::-webkit-scrollbar-thumb {
+            background-color: ${({ theme }) => theme.COLORS.PINK};
+            border-radius: 100vw;
+    }
+
     > .head {
         display: flex;
         align-items: center;
