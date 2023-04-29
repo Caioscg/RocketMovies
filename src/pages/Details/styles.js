@@ -15,6 +15,10 @@ export const Container = styled.div`
         overflow-y: auto;
         margin: 40px 116px;
 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
         .tags {
             margin-top: 40px;
             

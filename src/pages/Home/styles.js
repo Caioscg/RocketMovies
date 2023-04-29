@@ -3,46 +3,59 @@ import styled from 'styled-components'
 export const Container = styled.div`
     height: 100vh;
     width: 100%;
+
+    display: grid;
+    grid-template-rows: 116px 120px auto;
+    grid-template-areas: 
+    "header"
+    "head"
+    "content";
+
+    > main {
+        grid-area: content;
+
+        margin: 0 106px 26px 123px;
+
+        overflow-y: auto;
+
+        ::-webkit-scrollbar {
+                width: 8px;
+            }
+
+        ::-webkit-scrollbar-track {
+                background-color: transparent;
+                margin-block: 2px;
+                
+        }
+
+        ::-webkit-scrollbar-thumb {
+                background-color: ${({ theme }) => theme.COLORS.PINK};
+                border-radius: 100vw;
+        }
+
+        .notes {
+            margin-right: 8px;
+        }
+    }
 `
 
-export const Main = styled.div`
-    padding: 50px 106px 58px 123px;
+export const Head = styled.div`
+    grid-area: head;
 
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    overflow-y: auto;
-    ::-webkit-scrollbar {
-            width: 8px;
-        }
+    padding: 10px 106px 0 123px;
 
-    ::-webkit-scrollbar-track {
-            background-color: transparent;
-            margin-block: 2px;
-            
+    button {
+        padding: 16px 32px;
+        width: fit-content;
     }
 
-    ::-webkit-scrollbar-thumb {
-            background-color: ${({ theme }) => theme.COLORS.PINK};
-            border-radius: 100vw;
+    h1 {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 42px;
     }
-
-    > .head {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        margin-bottom: 38px;
-
-        button {
-            padding: 16px 32px;
-            width: fit-content;
-        }
-
-        h1 {
-            font-weight: 400;
-            font-size: 32px;
-            line-height: 42px;
-        }
-    }
-
 `

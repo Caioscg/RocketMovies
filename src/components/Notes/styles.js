@@ -8,7 +8,7 @@ export const Container = styled.div`
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_500};
     border-radius: 16px;
 
-    margin-top: 24px;
+    margin-bottom: 24px;
 
     display: flex;
     flex-direction: column;
