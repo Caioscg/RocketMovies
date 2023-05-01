@@ -26,7 +26,7 @@ export const Container = styled.div`
             line-height: 47px;
         }
 
-        .title {
+        .inputs {
             width: 100%;
 
             padding-right: 24px;
@@ -36,7 +36,27 @@ export const Container = styled.div`
             
             gap: 40px;
         }
+
+        h2 {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+
+            color: ${({ theme }) => theme.COLORS.GRAY_300};
+
+            margin-top: 32px;
+        }
         
+        .tags {
+            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
+
+            border-radius: 8px;
+
+            padding: 16px;
+            margin-top: 24px;
+
+            min-height: 88px;
+        }
     }
 `
 
@@ -58,4 +78,8 @@ export const Textarea = styled.textarea`
     &::placeholder {
         color: ${({ theme }) => theme.COLORS.GRAY_200};
     }
+`
+
+export const Tag = styled.div`
+
 `
