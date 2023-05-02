@@ -5,7 +5,7 @@ export const Container = styled.div`
     width: 100%;
 
     display: grid;
-    grid-template-rows: 116px 120px auto;
+    grid-template-rows: 116px auto;
     grid-template-areas: 
     "header"
     "content";
@@ -13,7 +13,26 @@ export const Container = styled.div`
     > main {
         grid-area: content;
 
-        margin: 40px 106px 85px 123px;
+        margin: 40px 106px 0 123px;
+        padding-right: 24px;
+        padding-bottom: 32px;
+
+        overflow-y: auto;
+        
+        ::-webkit-scrollbar {
+                width: 8px;
+            }
+
+        ::-webkit-scrollbar-track {
+                background-color: transparent;
+                margin-block: 2px;
+                
+        }
+
+        ::-webkit-scrollbar-thumb {
+                background-color: ${({ theme }) => theme.COLORS.PINK};
+                border-radius: 100vw;
+        }
 
         a {
             display: flex;
@@ -28,8 +47,7 @@ export const Container = styled.div`
 
         .inputs {
             width: 100%;
-
-            padding-right: 24px;
+            
             margin-top: 40px;
 
             display: flex;
@@ -55,7 +73,22 @@ export const Container = styled.div`
             padding: 16px;
             margin-top: 24px;
 
-            min-height: 88px;
+            display: flex;
+            gap: 24px;
+
+            flex-wrap: wrap;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 40px;
+
+            margin-top: 32px;
+
+            > button:first-child {
+                background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
+                color: ${({ theme }) => theme.COLORS.PINK};
+            }
         }
     }
 `
@@ -78,8 +111,4 @@ export const Textarea = styled.textarea`
     &::placeholder {
         color: ${({ theme }) => theme.COLORS.GRAY_200};
     }
-`
-
-export const Tag = styled.div`
-
 `

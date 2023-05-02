@@ -1,8 +1,9 @@
-import { Container, Textarea, Tag } from "./styles";
+import { Container, Textarea } from "./styles";
 import { Header } from "../../components/Header"
 import { Link } from "../../components/Link"
 import { Input } from "../../components/Input"
 import { Button } from "../../components/Button"
+import { NoteItem } from "../../components/NoteItem"
 
 import { FiArrowLeft } from "react-icons/fi"
 
@@ -25,11 +26,13 @@ export function New() {
                 <h2>Marcadores</h2>
 
                 <div className="tags">
-
+                    <NoteItem value="React"/>
+                    <NoteItem isNew placeholder="Novo marcador"/>
                 </div>
 
                 <div className="buttons">
-
+                    <Button title="Excluir filme"/>
+                    <Button title="Salvar alterações"/>
                 </div>
             </main>
         </Container>
