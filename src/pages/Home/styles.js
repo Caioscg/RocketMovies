@@ -48,7 +48,7 @@ export const Head = styled.div`
 
     padding: 10px 106px 0 123px;
 
-    button {
+    a {
         padding: 16px 32px;
         width: fit-content;
     }

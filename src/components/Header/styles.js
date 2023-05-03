@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
     grid-area: header;
@@ -13,7 +14,7 @@ export const Container = styled.div`
 
     border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_600};
 
-    > a {
+    > a:first-child {
         font-size: 30px;
         font-weight: 700;
         color: ${({ theme }) => theme.COLORS.PINK};
@@ -25,7 +26,7 @@ export const Container = styled.div`
     }
 `
 
-export const Profile = styled.div`
+export const Profile = styled(Link)`
     display: flex;
     align-items: center;
     gap: 9px;
@@ -33,15 +34,18 @@ export const Profile = styled.div`
     min-width: fit-content;
     justify-content: right;
 
+
     > div {
         display: flex;
         flex-direction: column;
         text-align: right;
         font-size: 14px;
         line-height: 18px;
+        
 
         span {
             font-weight: 700;
+            color: ${({ theme }) => theme.COLORS.WHITE};
         }
 
         a {

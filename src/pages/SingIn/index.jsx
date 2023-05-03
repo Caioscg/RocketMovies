@@ -32,7 +32,7 @@ export function SingIn() {
 
                 <Button title="Entrar"/>
 
-                <Link content="Criar conta"/>
+                <Link to="/register" content="Criar conta"/>
             </Form>
 
             <Background />

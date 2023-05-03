@@ -12,7 +12,7 @@ export function New() {
         <Container>
             <Header />
             <main>
-                <Link content="Voltar" icon={FiArrowLeft}/>
+                <Link to="/" content="Voltar" icon={FiArrowLeft}/>
 
                 <h1>Novo filme</h1>
 

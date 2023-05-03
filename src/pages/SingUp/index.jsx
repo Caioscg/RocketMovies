@@ -40,7 +40,7 @@ export function SingUp() {
 
                 <Button title="Cadastrar"/>
 
-                <Link content="Voltar para o login" icon={FiArrowLeft}/>
+                <Link to="/" content="Voltar para o login" icon={FiArrowLeft}/>
             </Form>
 
         </Container>

@@ -8,7 +8,7 @@ export function Profile() {
     return(
         <Container>
             <header>
-                <Link content="Voltar" icon={FiArrowLeft}/>
+                <Link to="/" content="Voltar" icon={FiArrowLeft}/>
             </header>
 
 

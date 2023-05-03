@@ -13,6 +13,13 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
+    cursor: pointer;
+    transition: all .5s;
+
+    &:hover {
+        filter: brightness(1.1) saturate(1.5);
+    }
+
     > h3 {
         font-size: 26px;
         line-height: 32px;

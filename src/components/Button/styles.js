@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.button`
+import { Link } from "react-router-dom"
+
+export const Container = styled(Link)`
     width: 100%;
 
     background-color: ${({ theme }) => theme.COLORS.PINK};
@@ -12,7 +14,6 @@ export const Container = styled.button`
     margin-top: 8px;
     
     border-radius: 10px;
-    border: none;
 
     display: flex;
     align-items: center;

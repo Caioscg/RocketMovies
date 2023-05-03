@@ -85,9 +85,14 @@ export const Container = styled.div`
 
             margin-top: 32px;
 
-            > button:first-child {
+            > a:first-child {
                 background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
                 color: ${({ theme }) => theme.COLORS.PINK};
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
             }
         }
     }

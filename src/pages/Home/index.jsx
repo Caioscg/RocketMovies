@@ -11,7 +11,7 @@ export function Home() {
             <Header />
                 <Head>
                     <h1>Meus filmes</h1>
-                    <Button title="Adicionar filme" icon={AiOutlinePlus}/>
+                    <Button to="/new" title="Adicionar filme" icon={AiOutlinePlus}/>
                 </Head>
             <main>
 
