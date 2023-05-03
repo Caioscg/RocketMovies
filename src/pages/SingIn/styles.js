@@ -35,7 +35,7 @@ export const Form = styled.form`
         margin: 48px 5px; 
     }
 
-    > a {
+    > a:last-child {
         margin: 42px auto;
     }
 `
