@@ -43,7 +43,7 @@ This project was developed with the following libraries:
 
 ## 💻 Project
 
-- This is the Front-end for the Rocket Movies app.
+- This is the Front-end for the Rocket Movies App.
 
 ## :memo: License
 
