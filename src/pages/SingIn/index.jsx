@@ -1,12 +1,17 @@
 import { Container, Form, Background } from "./styles";
-
 import { FiMail, FiLock } from 'react-icons/fi'
+
+import { useAuth } from '../../hooks/auth'
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { Link } from "../../components/Link";
 
 export function SingIn() {
+    
+    const data = useAuth()
+    console.log("MEU CONTEXTO =>", data)
+
     return(
         <Container>
             <Form>
