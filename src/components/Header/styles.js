@@ -26,7 +26,7 @@ export const Container = styled.div`
     }
 `
 
-export const Profile = styled(Link)`
+export const Profile = styled.div`
     display: flex;
     align-items: center;
     gap: 9px;
@@ -34,6 +34,7 @@ export const Profile = styled(Link)`
     min-width: fit-content;
     justify-content: right;
 
+    cursor: pointer;
 
     > div {
         display: flex;

@@ -12,6 +12,9 @@ function AuthProvider({ children }) {  // o children são todas as rotas da apli
             const response = await api.post("/sessions", { email, password })
             const { user, token } = response.data
 
+            localStorage.setItem("@rocketmovies:user", JSON.stringify(user))
+            localStorage.setItem("@rocketmovies:token", token)
+
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`  // aplica o token para todas no cabeçalho de todas requisições desse user
 
             setData({ user, token })
@@ -25,9 +28,32 @@ function AuthProvider({ children }) {  // o children são todas as rotas da apli
         }
     }
 
+    function signOut() {
+        localStorage.removeItem("@rocketmovies:user")
+        localStorage.removeItem("@rocketmovies:token")
+
+        setData({})  // objeto vazio, pra levar pro AuthRoutes
+    }
+
+    useEffect(() => {
+        const user = localStorage.getItem("@rocketmovies:user")
+        const token = localStorage.getItem("@rocketmovies:token")
+
+        if (user && token) {
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`
+
+            setData({
+                user: JSON.parse(user),
+                token
+            })
+        }
+
+    }, [])  // executa o useEffect apenas quando a pág é renderizada
+
     return(
         <AuthContext.Provider value={{
             signIn,
+            signOut,
             user: data.user
         }}>
             {children}
