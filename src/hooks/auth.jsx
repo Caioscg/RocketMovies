@@ -35,6 +35,25 @@ function AuthProvider({ children }) {  // o children são todas as rotas da apli
         setData({})  // objeto vazio, pra levar pro AuthRoutes
     }
 
+    async function updateProfile({ user }) {
+
+        try {
+            await api.put("/users", user)
+            localStorage.setItem("@rocketmovies:user", JSON.stringify(user))
+
+            setData({ user, token: data.token })
+            alert("Perfil atualizado.")
+
+        } catch(error) {
+            if(error.response) {
+                alert(error.response.data.message)
+            }
+            else {
+                alert("Não foi possível atualizar o perfil.")
+            }
+        }
+    }
+
     useEffect(() => {
         const user = localStorage.getItem("@rocketmovies:user")
         const token = localStorage.getItem("@rocketmovies:token")
@@ -54,6 +73,7 @@ function AuthProvider({ children }) {  // o children são todas as rotas da apli
         <AuthContext.Provider value={{
             signIn,
             signOut,
+            updateProfile,
             user: data.user
         }}>
             {children}
