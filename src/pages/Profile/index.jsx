@@ -6,6 +6,9 @@ import { FiArrowLeft, FiCamera, FiUser, FiMail, FiLock } from "react-icons/fi";
 
 import { useAuth } from "../../hooks/auth";
 import { useState } from "react";
+import { api } from "../../services/api";
+
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 
 export function Profile() {
     const { user, updateProfile } = useAuth()
@@ -15,15 +18,29 @@ export function Profile() {
     const [oldPassword, setOldPassword] = useState()
     const [newPassword, setNewPassword] = useState()
 
+    const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
+    const [avatar, setAvatar] = useState(avatarUrl)
+    const [avatarFile, setAvatarFile] = useState(null)
+
     async function handleUpdate() {
-        const user = {
+        const updated = {
             name,
             email,
             password: newPassword,
             old_password: oldPassword
         }
 
-        await updateProfile({ user })
+        const userUpdated = Object.assign(user, updated)  // junta o user com as mudanças, sem perder o que não mudou
+
+        await updateProfile({ user: userUpdated, avatarFile })  // avatarFile é o arq selecionado pelo user
+    }
+
+    function handleAvatarChange(event) {  // onChange passa o event de forma automática
+        const file = event.target.files[0]   // 1a posição
+        setAvatarFile(file)
+
+        const imagePreview = URL.createObjectURL(file)
+        setAvatar(imagePreview)
     }
 
     return(
@@ -35,10 +52,14 @@ export function Profile() {
 
             <Form>
                 <Avatar>
-                    <img src="https://github.com/Caioscg.png" alt="Foto do usuário" />
+                    <img src={avatar} alt="Foto do usuário" />
                     <label htmlFor="avatar">
                         <FiCamera />
-                        <input type="file" id="avatar"/>
+                        <input 
+                            type="file" 
+                            id="avatar" 
+                            onChange={handleAvatarChange}
+                        />
                     </label>
                 </Avatar>
 

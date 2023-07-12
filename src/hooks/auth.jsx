@@ -35,9 +35,17 @@ function AuthProvider({ children }) {  // o children são todas as rotas da apli
         setData({})  // objeto vazio, pra levar pro AuthRoutes
     }
 
-    async function updateProfile({ user }) {
+    async function updateProfile({ user, avatarFile }) {
 
         try {
+            if (avatarFile) {  // se mudou o avatar
+                const fileUploadForm = new FormData() // criando arquivo
+                fileUploadForm.append("avatar", avatarFile)  // adicionando no campo "avatar" a foto
+
+                const response = await api.patch("/users/avatar", fileUploadForm)
+                user.avatar = response.data.avatar  // salva o avatar no backend
+            }
+
             await api.put("/users", user)
             localStorage.setItem("@rocketmovies:user", JSON.stringify(user))
 
@@ -50,6 +58,25 @@ function AuthProvider({ children }) {  // o children são todas as rotas da apli
             }
             else {
                 alert("Não foi possível atualizar o perfil.")
+            }
+        }
+    }
+
+    async function sendNewNote({ title, description, rating, tags }) {
+        try {
+            await api.post("/notes", {
+                title,
+                description,
+                rating,
+                tags
+            })
+            alert("Nota criada com sucesso")
+        } catch(error) {
+            if (error.response) {
+                alert(error.response.data.message)
+            }
+            else {
+                alert("Não foi possível cadastrar a nota.")
             }
         }
     }
@@ -74,6 +101,7 @@ function AuthProvider({ children }) {  // o children são todas as rotas da apli
             signIn,
             signOut,
             updateProfile,
+            sendNewNote,
             user: data.user
         }}>
             {children}
