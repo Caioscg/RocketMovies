@@ -62,25 +62,6 @@ function AuthProvider({ children }) {  // o children são todas as rotas da apli
         }
     }
 
-    async function sendNewNote({ title, description, rating, tags }) {
-        try {
-            await api.post("/notes", {
-                title,
-                description,
-                rating,
-                tags
-            })
-            alert("Nota criada com sucesso")
-        } catch(error) {
-            if (error.response) {
-                alert(error.response.data.message)
-            }
-            else {
-                alert("Não foi possível cadastrar a nota.")
-            }
-        }
-    }
-
     useEffect(() => {
         const user = localStorage.getItem("@rocketmovies:user")
         const token = localStorage.getItem("@rocketmovies:token")
@@ -101,8 +82,7 @@ function AuthProvider({ children }) {  // o children são todas as rotas da apli
             signIn,
             signOut,
             updateProfile,
-            sendNewNote,
-            user: data.user
+            user: data.user,
         }}>
             {children}
         </AuthContext.Provider>
