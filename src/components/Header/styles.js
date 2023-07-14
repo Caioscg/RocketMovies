@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const Container = styled.div`
     grid-area: header;
 
     display: flex;
     align-items: center;
-    gap: 128px;
+    gap: clamp(20px, 50px + 5vw, 128px);
 
     height: 116px;
     width: 100%;

@@ -51,7 +51,7 @@ export function New() {
             await api.post("/notes", {
                 title,
                 description,
-                rating: Number(rating),
+                rating,
                 tags
             })
             alert("Nota criada com sucesso")

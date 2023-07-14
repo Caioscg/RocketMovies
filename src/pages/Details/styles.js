@@ -19,6 +19,17 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: flex-start;
 
+        .head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 100%;
+
+            > a {
+                margin-right: 24px;
+            }
+        }
+
         .tags {
             margin-top: 40px;
             

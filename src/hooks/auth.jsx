@@ -6,6 +6,7 @@ export const AuthContext = createContext({})
 
 function AuthProvider({ children }) {  // o children são todas as rotas da aplicação
     const [data, setData] = useState("")
+    const [notes, setNotes] = useState([])
 
     async function signIn({ email, password }) {
         try {
@@ -62,6 +63,11 @@ function AuthProvider({ children }) {  // o children são todas as rotas da apli
         }
     }
 
+    async function searchNotes(search) {
+        const response = await api.get(`/notes?title=${search}`)
+        setNotes(response.data)
+    }
+
     useEffect(() => {
         const user = localStorage.getItem("@rocketmovies:user")
         const token = localStorage.getItem("@rocketmovies:token")
@@ -83,6 +89,8 @@ function AuthProvider({ children }) {  // o children são todas as rotas da apli
             signOut,
             updateProfile,
             user: data.user,
+            searchNotes,
+            notes
         }}>
             {children}
         </AuthContext.Provider>
