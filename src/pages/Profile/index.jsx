@@ -7,6 +7,7 @@ import { FiArrowLeft, FiCamera, FiUser, FiMail, FiLock } from "react-icons/fi";
 import { useAuth } from "../../hooks/auth";
 import { useState } from "react";
 import { api } from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 
@@ -21,6 +22,8 @@ export function Profile() {
     const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
     const [avatar, setAvatar] = useState(avatarUrl)
     const [avatarFile, setAvatarFile] = useState(null)
+
+    const navigate = useNavigate()
 
     async function handleUpdate() {
         const updated = {
@@ -43,10 +46,14 @@ export function Profile() {
         setAvatar(imagePreview)
     }
 
+    function handleBack() {
+        navigate(-1)
+    }
+
     return(
         <Container>
             <header>
-                <Link to="/" content="Voltar" icon={FiArrowLeft}/>
+                <Link content="Voltar" icon={FiArrowLeft} onClick={handleBack}/>
             </header>
 
 

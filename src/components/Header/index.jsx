@@ -23,11 +23,6 @@ export function Header() {
         navigate("/profile")
     }
 
-    function handleSignOut() {
-        navigate("/")
-        signOut()
-    }
-
     useEffect(() => {        
         searchNotes(search)
     }, [search])
@@ -45,7 +40,7 @@ export function Header() {
             <Profile>
                 <div>
                     <span onClick={handleProfile}>{user.name}</span>
-                    <Link onClick={handleSignOut}>
+                    <Link to="/" onClick={signOut}>
                         sair
                     </Link>
                 </div>

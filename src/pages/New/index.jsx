@@ -22,8 +22,10 @@ export function New() {
     const navigate = useNavigate()
 
     function handleAddTags() {
-        setTags(previousState => [...previousState, newTag])
-        setNewTag("")  // limpa o value do newTag
+        if (newTag) {
+            setTags(previousState => [...previousState, newTag])
+            setNewTag("")  // limpa o value do newTag
+        }
     }
 
     function handleRemoveTag(deleted) {
@@ -64,6 +66,10 @@ export function New() {
             }
         }
         
+        navigate("/")
+    }
+
+    function handleBack() {
         navigate(-1)
     }
     
@@ -71,7 +77,7 @@ export function New() {
         <Container>
             <Header />
             <main>
-                <Link to="/" content="Voltar" icon={FiArrowLeft}/>
+                <Link content="Voltar" icon={FiArrowLeft} onClick={handleBack}/>
 
                 <h1>Novo filme</h1>
 
