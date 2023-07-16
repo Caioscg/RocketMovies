@@ -31,7 +31,7 @@ export function Header() {
         <Container>
             <Link to="/">RocketMovies</Link>
 
-            <Input 
+            <input
                 type="text" 
                 placeholder="Pesquisar pelo título"
                 onChange={e => setSearch(e.target.value)}

@@ -20,10 +20,10 @@ export function Home() {
     return(
         <Container>
             <Header />
-                <Head>
-                    <h1>Meus filmes</h1>
-                    <Button to="/new" title="Adicionar filme" icon={AiOutlinePlus}/>
-                </Head>
+            <Head>
+                <h1>Meus filmes</h1>
+                <Button to="/new" title="Adicionar filme" icon={AiOutlinePlus}/>
+            </Head>
             <main>
 
                 <div className="notes">

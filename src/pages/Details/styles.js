@@ -13,7 +13,7 @@ export const Container = styled.div`
     > main {
         grid-area: content;
         overflow-y: auto;
-        margin: 40px 116px;
+        margin: 40px clamp(40px, 20px + 5vw, 116px);
 
         display: flex;
         flex-direction: column;

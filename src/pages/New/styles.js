@@ -13,7 +13,7 @@ export const Container = styled.div`
     > main {
         grid-area: content;
 
-        margin: 40px 106px 0 123px;
+        margin: 40px clamp(40px, 20px + 5vw, 106px) 0 clamp(40px, 20px + 5vw, 123px);
         padding-right: 24px;
         padding-bottom: 32px;
 

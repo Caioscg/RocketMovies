@@ -14,7 +14,7 @@ export const Container = styled.div`
     > main {
         grid-area: content;
 
-        margin: 0 106px 26px 123px;
+        margin: 0 clamp(40px, 20px + 5vw, 106px) 26px clamp(40px, 20px + 5vw, 123px);
 
         overflow-y: auto;
 
@@ -37,6 +37,12 @@ export const Container = styled.div`
             margin-right: 8px;
         }
     }
+
+    @media (max-width: 500px) {
+        main {
+            margin-top: 20px;
+        }
+    }
 `
 
 export const Head = styled.div`
@@ -46,7 +52,7 @@ export const Head = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    padding: 10px 106px 0 123px;
+    padding: 10px clamp(40px, 20px + 5vw, 106px) 0 clamp(40px, 20px + 5vw, 123px);
 
     a {
         padding: 16px 32px;
@@ -57,5 +63,13 @@ export const Head = styled.div`
         font-weight: 400;
         font-size: 32px;
         line-height: 42px;
+    }
+
+    @media (max-width: 500px) {
+        margin-top: 40px;
+
+        a {
+            padding: 8px 16px;
+        }
     }
 `

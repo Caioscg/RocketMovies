@@ -5,11 +5,11 @@ export const Container = styled.div`
 
     display: flex;
     align-items: center;
-    gap: clamp(20px, 50px + 5vw, 128px);
+    gap: clamp(10px, 20px + 5vw, 128px);
 
     height: 116px;
     width: 100%;
-    padding: 0 123px;
+    padding: 0 clamp(30px, 10px + 5vw ,123px);
 
     border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_600};
 
@@ -21,6 +21,44 @@ export const Container = styled.div`
 
         &:hover {
             filter: drop-shadow(0 0 1.5em ${({ theme }) => theme.COLORS.PINK});
+        }
+    }
+
+    > input {
+        height: 56px;
+        width: 100%;
+        border-radius: 10px;
+
+        padding: 16px;
+        color: ${({ theme }) => theme.COLORS.WHITE};
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+        border: 0;
+        padding: 24px 19px;
+
+        &::placeholder {
+            color: ${({ theme }) => theme.COLORS.GRAY_200};
+        }
+    }
+
+    @media (max-width: 780px) {
+        display: grid;
+        grid-template-areas: "A B"
+        "C C";
+        gap: 0;
+        height: 150px;
+
+        > a:first-child {
+            grid-area: A;
+        }
+
+        > div {
+            grid-area: B;
+        }
+
+        > input {
+            grid-area: C;
+            height: 42px;
+            margin-bottom: 20px;
         }
     }
 `
