@@ -2,6 +2,8 @@
 
 <p align="center">
 A basic frontend development.
+ATENÇÃO: OS SERVIDORES SÃO GRATUITOS PORTANTO AO CLICAR,
+AGUARDE 1 MINUTO, ATUALIZE A PAGINA PARA QUE O PROJETO SEJA INICIALIZADO
 </p>
 
 <p align="center">
