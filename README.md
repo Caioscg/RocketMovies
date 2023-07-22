@@ -1,6 +1,6 @@
 <h1 align="center">Rocket Movies</h1>
 
-<h2>Site Link<a href="https://rocketm.netlify.app"></h2>
+<h2>Site Link</h2> https://rocketm.netlify.app
 
 <p align="center">
 ATTENTION: THE SERVERS ARE FREE, THEREFORE WHEN ACCESSING,
