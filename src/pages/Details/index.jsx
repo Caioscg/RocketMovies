@@ -71,7 +71,7 @@ export function Details() {
                             <span><AiOutlineClockCircle /></span>
                             <span>
                                 {
-                                    data.create_at.replace(" ", " às ")
+                                    data.create_at.split(" ").shift().replace("-","/").replace("-","/")  // remove hora e coloca /
                                 }
                             </span>
                         </div>
