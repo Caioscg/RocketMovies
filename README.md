@@ -1,9 +1,10 @@
 <h1 align="center">Rocket Movies</h1>
 
+<h2>Site Link<a href="https://rocketm.netlify.app"></h2>
+
 <p align="center">
-A basic frontend development.
-ATENÇÃO: OS SERVIDORES SÃO GRATUITOS PORTANTO AO CLICAR,
-AGUARDE 1 MINUTO, ATUALIZE A PAGINA PARA QUE O PROJETO SEJA INICIALIZADO
+ATTENTION: THE SERVERS ARE FREE, THEREFORE WHEN ACCESSING,
+WAIT 1 MINUTE, REFRESH THE PAGE FOR THE PROJECT TO BE INITIALIZED
 </p>
 
 <p align="center">
