@@ -1,5 +1,3 @@
-<h2>Site Link: https://rocketm.netlify.app</h2>
-
 <h1 align="center">Rocket Movies</h1>
 
 <p align="center">
