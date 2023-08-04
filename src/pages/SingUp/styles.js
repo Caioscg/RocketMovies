@@ -2,12 +2,17 @@ import styled from 'styled-components'
 import backgroundImg from '../../assets/backgroundImg.png'
 
 export const Container = styled.div`
-height: 100vh;
-display: flex;
+    height: 100vh;
+    display: flex;
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+        padding-top: 15px;
+    }
 `
 
 export const Form = styled.form`
-    padding: 0 170px 0 134px;
+    padding: 0 clamp(30px, 10px + 6vw, 170px) 0 clamp(30px, 10px + 6vw, 134px);
 
     display: flex;
     flex-direction: column;

@@ -38,10 +38,7 @@ export function SingUp() {
 
     return(
         <Container>
-            <Background />
-
             <Form>
-
                 <div className="title">
                     <h1>RocketMovies</h1>
                     <p>Aplicação para acompanhar tudo que assistir.</p>
@@ -74,6 +71,8 @@ export function SingUp() {
 
                 <Link to="/" content="Voltar para o login" icon={FiArrowLeft}/>
             </Form>
+
+            <Background />
 
         </Container>
     )
