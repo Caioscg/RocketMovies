@@ -2,7 +2,7 @@
 
 <p align="center">
 Welcome to the Rocket Movies app, here you can save and check your movies! <br>
-<h2>Site Link: https://rocketm.netlify.app</h2>
+### Site Link: https://rocketm.netlify.app
 </p>
 
 
