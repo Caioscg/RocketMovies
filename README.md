@@ -1,10 +1,10 @@
-<h1 align="center">Rocket Movies</h1>
-
 <h2>Site Link: https://rocketm.netlify.app</h2>
 
+<h1 align="center">Rocket Movies</h1>
+
 <p align="center">
-ATTENTION: THE SERVERS ARE FREE, THEREFORE WHEN ACCESSING,
-WAIT 1 MINUTE, REFRESH THE PAGE FOR THE PROJECT TO BE INITIALIZED
+Welcome to the Rocket Movies app, here you can save and check your movies! <br>
+Site Link: https://rocketm.netlify.app
 </p>
 
 <p align="center">
@@ -31,6 +31,7 @@ This project was developed with the following technologies:
 - HTML and CSS
 - JavaScript
 - ReactJs
+- SQLite
 - Vite
 - NodeJs
 - Figma
@@ -43,10 +44,21 @@ This project was developed with the following libraries:
 - styled components
 - react icons
 - react router dom
+- express
+- nodemon
+- express-async-errors
+- sqlite
+- knex
+- bcryptjs
+- jsonwebtoken
+- multer
+- cors
+- dotenv
+- pm2
 
 ## 💻 Project
 
-- This is the Front-end for the Rocket Movies App.
+- With this app you can save movie notes, including rating and informations about the movies.
 
 ## :memo: License
 
